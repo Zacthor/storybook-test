@@ -1,5 +1,5 @@
 import React from 'react';
-import List from '../components/molecules/list/List';
+import List from '../components/molecules/List';
 
 export default {
   title: 'List',
