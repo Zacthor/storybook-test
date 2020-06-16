@@ -22,6 +22,6 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true
   },
-  "include": ["src/**/*", "components/atoms/**/*"],
+  "include": ["src/**/*", "components/atoms/**/*", "components/molecules/**/*"],
   "exclude": ["node_modules", "build", "scripts"]
 }

@@ -1,19 +1,23 @@
 import React, { ReactElement } from 'react';
-//import styles from './label.css';
+import styled from '@emotion/styled';
 
 interface LabelProps {
   children: string | ReactElement;
   stuff?: string;
 }
 
+const LabelWrap = styled.div({
+  color: 'red',
+});
+
 export const Label = (props: LabelProps) => {
   const { children, stuff } = props;
 
   return (
-    <div>
+    <LabelWrap>
       {children}
       {stuff ? stuff : ''}
-    </div>
+    </LabelWrap>
   );
 };
 

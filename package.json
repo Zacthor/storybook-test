@@ -1,7 +1,9 @@
 {
   "name": "fluid-tidal",
   "version": "1.0.0",
-  "dependencies": {},
+  "dependencies": {
+    "@emotion/styled": "^10.0.27"
+  },
   "devDependencies": {
     "@babel/core": "^7.10.2",
     "@storybook/addon-actions": "^5.3.19",
