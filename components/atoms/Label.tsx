@@ -20,7 +20,6 @@ const StyleWrap = styled.div((props: LabelProps) => {
     result.textAlign = 'center';
   }
 
-  console.log(result);
   return { ...result };
 });
 
