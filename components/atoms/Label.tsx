@@ -24,13 +24,9 @@ const StyleWrap = styled.div((props: LabelProps) => {
 });
 
 export const Label = (props: LabelProps) => {
-  const { children, center, color } = props;
+  const { children } = props;
 
-  return (
-    <StyleWrap color={color} center={center}>
-      {children}
-    </StyleWrap>
-  );
+  return <StyleWrap {...props}>{children}</StyleWrap>;
 };
 
 export default Label;
