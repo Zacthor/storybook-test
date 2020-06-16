@@ -3,20 +3,23 @@ import styled from '@emotion/styled';
 
 interface LabelProps {
   children: string | ReactElement;
-  stuff?: string;
+  center?: boolean;
 }
 
 const LabelWrap = styled.div({
   color: 'red',
 });
 
+const Centered = styled.div((props: LabelProps) => {
+  return props.center ? { textAlign: 'center' } : {};
+});
+
 export const Label = (props: LabelProps) => {
-  const { children, stuff } = props;
+  const { children, center } = props;
 
   return (
     <LabelWrap>
-      {children}
-      {stuff ? stuff : ''}
+      <Centered center={center}>{children}</Centered>
     </LabelWrap>
   );
 };
