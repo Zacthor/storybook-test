@@ -11,7 +11,7 @@ interface StyleProps {
   color?: string;
 }
 
-const StyleWrap = styled.div((props: LabelProps) => {
+const StyleWrapDiv = styled.div((props: LabelProps) => {
   const result: StyleProps = {};
   if (props.color) {
     result.color = props.color;
@@ -26,7 +26,7 @@ const StyleWrap = styled.div((props: LabelProps) => {
 export const Label = (props: LabelProps) => {
   const { children } = props;
 
-  return <StyleWrap {...props}>{children}</StyleWrap>;
+  return <StyleWrapDiv {...props}>{children}</StyleWrapDiv>;
 };
 
 export default Label;
