@@ -6,5 +6,5 @@ export default {
   component: Label,
 };
 
-export const BasicLabel = () => <Label>Hello World</Label>;
+export const BasicLabel = () => <Label color="red">Hello World</Label>;
 export const BasicLabelStuff = () => <Label center={true}>Hello World</Label>;

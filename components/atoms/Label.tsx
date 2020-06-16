@@ -4,23 +4,33 @@ import styled from '@emotion/styled';
 interface LabelProps {
   children: string | ReactElement;
   center?: boolean;
+  color?: string;
+}
+interface StyleProps {
+  textAlign?: 'center';
+  color?: string;
 }
 
-const LabelWrap = styled.div({
-  color: 'red',
-});
+const StyleWrap = styled.div((props: LabelProps) => {
+  const result: StyleProps = {};
+  if (props.color) {
+    result.color = props.color;
+  }
+  if (props.center) {
+    result.textAlign = 'center';
+  }
 
-const Centered = styled.div((props: LabelProps) => {
-  return props.center ? { textAlign: 'center' } : {};
+  console.log(result);
+  return { ...result };
 });
 
 export const Label = (props: LabelProps) => {
-  const { children, center } = props;
+  const { children, center, color } = props;
 
   return (
-    <LabelWrap>
-      <Centered center={center}>{children}</Centered>
-    </LabelWrap>
+    <StyleWrap color={color} center={center}>
+      {children}
+    </StyleWrap>
   );
 };
 
