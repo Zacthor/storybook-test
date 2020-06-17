@@ -7,4 +7,4 @@ export default {
 };
 
 export const BasicLabel = () => <Label color="red">Hello World</Label>;
-export const BasicLabelStuff = () => <Label center={true}>Hello World</Label>;
+export const BasicLabelCenter = () => <Label center={true}>Hello World</Label>;
